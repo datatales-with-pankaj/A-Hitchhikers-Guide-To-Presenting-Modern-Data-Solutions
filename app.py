@@ -80,13 +80,13 @@ def app(title=None):
     my_report = sv.compare([train_df, "Training Data"], [test_df, "Test Data"], "Survived", feature_config)
     
     # Uncomment to get single analysis of Training Data
-    # analysis = sv.analyze([train,'cegis'], 
+    # analysis = sv.analyze([train,'kaggle_project'], 
     #                       feat_cfg= sv.FeatureConfig(skip="PassengerId", 
     #                                                 force_text=["Age"]),
                             # target_feat=None)
     
-    my_report.show_html(filepath='./cegis.html', open_browser=False, layout='vertical', scale=1.0) # 
-    st_display_sweetviz('./cegis.html')
+    my_report.show_html(filepath='./kaggle_project.html', open_browser=False, layout='vertical', scale=1.0) # 
+    st_display_sweetviz('./kaggle_project.html')
     
     st.subheader("Why should we conduct Statistical Tests 🧮 in the first place?")
     st.write("We want to test one of the possible Hypothesis i.e. \n***'Did the rich people on the Titanic had a higher survival rate than the others based on PClass or not?'***\n\n**Approach** : The data has several features but we are only concerned about the followings:\n - **Survived**: A category of either 0 or 1 which indicates whether that individual survived.\n - **Pclass**: The ship was divided into three classes. First, Second, and Third.\n - **Fare**: The price that this individual paid for the ticket.")
